@@ -80,7 +80,7 @@ export default function Home() {
       <div className="container">
         <h1>Your text summary</h1>
         <p>
-          {text ? text.split(" ").length : 0} words, {text.length} characters
+          {text ? text.split(/\s+/).length : 0} words, {text.length} characters
         </p>
         <h2>Preview</h2>
         <p>{text}</p>
