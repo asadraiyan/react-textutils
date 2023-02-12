@@ -3,18 +3,18 @@ import { Link } from "react-router-dom";
 
 export default function Navbar(props) {
 
-  const {mode, setMode} = props
+  const { mode, setMode } = props
 
   const [modeText, setmodeText] = useState("Enable dark mode");
-  const redBgHandler = () => {
+  const toggle = () => {
     if (mode === "light") {
       setMode("dark");
-      document.body.style.backgroundColor = "black";
+      document.body.style.background = "linear-gradient(45deg, rgb(92, 92, 92) 50%, rgb(27, 27, 27) 50%)";
       document.body.style.color = "white";
       setmodeText("Enable light mode");
     } else {
       setMode("light");
-      document.body.style.backgroundColor = "white";
+      document.body.style.background = "linear-gradient(45deg, rgb(241, 241, 241) 50%, rgb(158, 232, 255) 50%)";
       document.body.style.color = "black";
       setmodeText("Enable dark mode");
     }
@@ -22,14 +22,15 @@ export default function Navbar(props) {
   return (
     <nav mode={mode}>
       <div className="navLink">
-        <Link to="/">Home</Link>
+        <div className="logo">
+          <span>TextUtils</span>
+        </div>
+        <Link to="/" className="home">Home</Link>
         <Link to="/About">About</Link>
-        <Link to="/Services">Services</Link>
-        <Link to="/Contact">Contact Us</Link>
       </div>
       <div className="box">
         {modeText}
-        <button className="mode" onClick={redBgHandler}>toggle</button>
+        <input type="checkbox" className="mode" onClick={toggle} />
       </div>
     </nav>
   );

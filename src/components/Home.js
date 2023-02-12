@@ -1,12 +1,18 @@
 import React, { useState } from "react";
 
-export default function Home() {
+export default function Home({ mode }) {
   const [text, setText] = useState("");
-  const [btntext, setBtntext] = useState("Enable dark mode");
-  const [myStyle, setmyStyle] = useState({
-    color: "black",
+
+  const lightBack = {
     backgroundColor: "white",
-  });
+    color: "black"
+  }
+
+  const DarkBack = {
+    backgroundColor: "#272727",
+    color: "white"
+  }
+
   const upperCaseHandler = () => {
     // console.log("Uppercase was clicked" + text)
     const newText = text.toUpperCase();
@@ -22,20 +28,9 @@ export default function Home() {
     setText("");
   };
 
-  const toggleStyle = () => {
-    if (myStyle.color === "black") {
-      setmyStyle({
-        color: "white",
-        backgroundColor: "black",
-      });
-      setBtntext("Enable light mode");
-    } else {
-      setmyStyle({
-        color: "black",
-        backgroundColor: "white",
-      });
-      setBtntext("Enable dark mode");
-    }
+  const extraSpacesHandler = () => {
+    const newText = text.split(/[ ]+/);
+    setText(newText.join(" "));
   };
 
   const copyTextHandler = () => {
@@ -47,44 +42,46 @@ export default function Home() {
   };
 
   return (
-    <div>
+    <>
+
       <div className="container">
-        <h1>Enter the text to analyze below</h1>
+        <h1>Enter the text to analyse below:</h1>
         <textarea
           name="form"
           className="text"
           value={text}
           onChange={changetext}
           rows="10"
-          style={myStyle}
-          // style={{color: "red"}}
+          style={mode === "light" ? lightBack : DarkBack}
+
         ></textarea>
         <div className="btncont">
-          <button className="btn" onClick={upperCaseHandler}>
+          <button className="btn" onClick={upperCaseHandler} disabled={text.length === 0 ? true : false}>
             Convert to Uppercase
           </button>
-          <button className="btn1" onClick={lowerCaseHandler}>
+          <button className="btn1" onClick={lowerCaseHandler} disabled={text.length === 0 ? true : false}>
             Convert to Lowercase
           </button>
-          <button className="btn2" onClick={clearTextHandler}>
+          <button className="btn2" onClick={clearTextHandler} disabled={text.length === 0 ? true : false}>
             Clear text
           </button>
-          <button className="btn3" onClick={toggleStyle}>
-            {btntext}
+          <button className="btn3" onClick={extraSpacesHandler} disabled={text.length === 0 ? true : false}>
+            Remove extra spaces
           </button>
-          <button className="btn" onClick={copyTextHandler}>
+          <button className="btn" onClick={copyTextHandler} disabled={text.length === 0 ? true : false}>
             Copy Text
           </button>
         </div>
       </div>
       <div className="container">
-        <h1>Your text summary</h1>
-        <p>
+        <h1 className="heading">Your text summary</h1>
+        <p className="words-characters">
           {text ? text.split(/\s+/).length : 0} words, {text.length} characters
         </p>
-        <h2>Preview</h2>
-        <p>{text}</p>
+        <p className="read">{0.008 * text.split(/\s+/).length} Minutes to read</p>
+        <h2 className="preview">Preview</h2>
+        <p className="preview-text">{text}</p>
       </div>
-    </div>
+    </>
   );
 }
