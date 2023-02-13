@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Laila:wght@300&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +13,8 @@ body {
 
 nav {
   display: flex;
-  background-color: rgb(13, 13, 88);
+  background-color: rgb(16 50 92);
+  ;
   justify-content: space-between;
   align-items: center;
   height: 50px;
@@ -27,8 +30,9 @@ nav {
 .navLink a {
   text-decoration: none;
   color: white;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.2rem;
+  font-family: 'Laila', sans-serif;
 }
 
 .navLink a:hover {
@@ -42,6 +46,8 @@ nav {
   color: white;
   font-weight: 500;
   font-size: 1.1rem;
+  font-family: 'Laila', sans-serif;
+  font-weight: 600;
   align-items: center;
 }
 
@@ -59,6 +65,8 @@ nav {
 .logo {
   color: white;
   font-size: 27px;
+  font-family: 'Laila', sans-serif;
+  font-weight: 600;
 }
 
 .switch {

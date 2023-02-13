@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Laila:wght@300&display=swap');
+
 .wrapper {
     padding: 0;
     margin: 0;
@@ -17,6 +19,7 @@
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
+    font-family: 'Laila', sans-serif;
 
 }
 
@@ -57,13 +60,13 @@
     border-radius: 25px;
     border: none;
     cursor: pointer;
-    background-color: #7cc4f4;
+    background-color: #c9e1f1;
     box-shadow: 1px 1px 1px 1px rgb(195, 192, 192);
 
 }
 
 .up-down:hover {
-    background-color: #0995f2;
+    background-color: #81c6f4;
 }
 
 .content {
@@ -74,7 +77,8 @@
     margin-top: 5px;
     border-radius: 5px;
     box-shadow: 2px 2px 2px 2px rgb(195, 192, 192);
-    height: 70px;
+    height: 75px;
     padding: 10px 10px;
     align-items: center;
+    font-weight: 600;
 }
