@@ -30,7 +30,10 @@ export default function Navbar(props) {
       </div>
       <div className="box">
         {modeText}
-        <input type="checkbox" className="mode" onClick={toggle} />
+        <label className="switch">
+          <input type="checkbox" className="mode" onClick={toggle} />
+          <span className="slider"></span>
+        </label>
       </div>
     </nav>
   );
