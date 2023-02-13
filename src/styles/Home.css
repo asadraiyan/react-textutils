@@ -109,3 +109,11 @@
 .read {
   font-size: 18px;
 }
+
+@media only screen and (max-width:500px) {
+  .text {
+    width: 75vw;
+    height: 20vh;
+  }
+
+}
