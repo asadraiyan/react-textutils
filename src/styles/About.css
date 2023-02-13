@@ -46,6 +46,10 @@
 
 }
 
+.heading {
+    font-size: 25px;
+}
+
 .up-down {
     width: 25px;
     height: 25px;
@@ -54,7 +58,7 @@
     border: none;
     cursor: pointer;
     background-color: #7cc4f4;
-    box-shadow: 1px 1px 2px 2px rgb(195, 192, 192);
+    box-shadow: 1px 1px 1px 1px rgb(195, 192, 192);
 
 }
 

@@ -18,7 +18,7 @@ function App() {
         />
         <Routes>
           <Route exact path="/" element={<Home mode={mode} />} />
-          <Route exact path="/About" element={<About />} />
+          <Route exact path="/About" element={<About mode={mode} />} />
         </Routes>
       </div>
     </Router>
