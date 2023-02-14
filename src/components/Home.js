@@ -45,7 +45,7 @@ export default function Home({ mode }) {
     <>
       <div className="big-container">
         <div className="main-container">
-          <h1>Enter the text to analyse below:</h1>
+          <h1 className="main-heading">Enter the text to analyse below:</h1>
           <textarea
             name="form"
             className="text"
