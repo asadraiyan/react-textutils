@@ -33,7 +33,8 @@ export default function Home(props) {
   };
 
   const extraSpacesHandler = () => {
-    const newText = text.split(/[ ]+/);
+    const string = text.trim();
+    const newText = string.split(/[ ]+/);
     setText(newText.join(" "));
     showAlert("Extra spaces has been removed !", "Success")
   };

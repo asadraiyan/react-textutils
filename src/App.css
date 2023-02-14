@@ -100,8 +100,8 @@ nav {
   left: 3px;
   bottom: 3px;
   background-color: white;
-  transition: 0.4s;
-  border-radius: 40px;
+  transition: 0.3s;
+  border-radius: 32px;
 }
 
 input:checked+.slider {

@@ -28,9 +28,7 @@
 }
 
 .item {
-
     padding: 10px 20px;
-
 }
 
 .boxes {
@@ -70,7 +68,7 @@
 .content {
     display: flex;
     font-size: 17px;
-    transition: 0.4s;
+    transition: 0.4s all ease;
     background-color: white;
     margin-top: 5px;
     border-radius: 5px;

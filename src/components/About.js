@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import "../styles/About.css"
 
 export default function About({ mode }) {
-  const [show, setShow] = useState(false)
+  const [showCard1, setShowCard1] = useState(false)
+  const [showCard2, setShowCard2] = useState(false)
+  const [showCard3, setShowCard3] = useState(false)
   const lightBack = {
     backgroundColor: "white",
     color: "black"
@@ -19,10 +21,10 @@ export default function About({ mode }) {
         <div className="item">
           <div className="boxes" style={mode === "light" ? lightBack : DarkBack}>
             <h2 className="headings">Analyse your text</h2>
-            <button className="up-down" onClick={() => { setShow(!show) }} >{show ? "-" : "+"}</button>
+            <button className="up-down" onClick={() => { setShowCard1(!showCard1) }} >{showCard1 ? "-" : "+"}</button>
           </div>
           {
-            show && <p className="content" style={mode === "light" ? lightBack : DarkBack}>
+            showCard1 && <p className="content" style={mode === "light" ? lightBack : DarkBack}>
               Textutils gives you a way to analyse your text quickly and efficently. It lets you to count words, count characters with reading time required. It has both light and dark mode for better look.
             </p>
           }
@@ -31,10 +33,10 @@ export default function About({ mode }) {
         <div className="item">
           <div className="boxes" style={mode === "light" ? lightBack : DarkBack}>
             <h2 className="headings">Free to use</h2>
-            <button className="up-down" onClick={() => { setShow(!show) }}>{show ? "-" : "+"}</button>
+            <button className="up-down" onClick={() => { setShowCard2(!showCard2) }}>{showCard2 ? "-" : "+"}</button>
           </div>
           {
-            show && <p className="content" style={mode === "light" ? lightBack : DarkBack}>
+            showCard2 && <p className="content" style={mode === "light" ? lightBack : DarkBack}>
               TextUtils is a free character counter tool that provided instant character count and word count statics for a given text. TextUtils reports the number of words and character. Thus it is suitable for writing text with word / character limit.
             </p>
           }
@@ -43,10 +45,10 @@ export default function About({ mode }) {
         <div className="item">
           <div className="boxes" style={mode === "light" ? lightBack : DarkBack}>
             <h2 className="headings">Browser compatible</h2>
-            <button className="up-down" onClick={() => { setShow(!show) }}>{show ? "-" : "+"}</button>
+            <button className="up-down" onClick={() => { setShowCard3(!showCard3) }}>{showCard3 ? "-" : "+"}</button>
           </div>
           {
-            show && <p className="content" style={mode === "light" ? lightBack : DarkBack}>
+            showCard3 && <p className="content" style={mode === "light" ? lightBack : DarkBack}>
               This word counter app works in any web browser such as Chrome, Firefox, Internet Explorer, Safari,Opera etc.
             </p>
           }

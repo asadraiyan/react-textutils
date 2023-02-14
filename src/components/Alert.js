@@ -1,9 +1,9 @@
 import React from 'react'
 import "../styles/Alert.css"
-const Alert = (props) => {
+const Alert = ({ alert }) => {
     return (
-        props.alert && <div className='alert-box'>
-            <span>{props.alert.type}</span> : {props.alert.message}
+        alert && <div className='alert-box'>
+            <span>{alert.type}: {alert.message}</span>
         </div>
     )
 }
