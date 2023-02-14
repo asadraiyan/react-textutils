@@ -18,8 +18,8 @@ export default function About({ mode }) {
         <h1 className="about" >About App</h1>
         <div className="item">
           <div className="boxes" style={mode === "light" ? lightBack : DarkBack}>
-            <h2 className="heading">Analyse your text</h2>
-            <button className="up-down" onClick={() => { setShow(!show) }}>{show ? "-" : "+"}</button>
+            <h2 className="headings">Analyse your text</h2>
+            <button className="up-down" onClick={() => { setShow(!show) }} >{show ? "-" : "+"}</button>
           </div>
           {
             show && <p className="content" style={mode === "light" ? lightBack : DarkBack}>
@@ -30,7 +30,7 @@ export default function About({ mode }) {
         </div>
         <div className="item">
           <div className="boxes" style={mode === "light" ? lightBack : DarkBack}>
-            <h2 className="heading">Free to use</h2>
+            <h2 className="headings">Free to use</h2>
             <button className="up-down" onClick={() => { setShow(!show) }}>{show ? "-" : "+"}</button>
           </div>
           {
@@ -42,7 +42,7 @@ export default function About({ mode }) {
         </div>
         <div className="item">
           <div className="boxes" style={mode === "light" ? lightBack : DarkBack}>
-            <h2 className="heading">Browser compatible</h2>
+            <h2 className="headings">Browser compatible</h2>
             <button className="up-down" onClick={() => { setShow(!show) }}>{show ? "-" : "+"}</button>
           </div>
           {

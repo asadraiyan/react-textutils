@@ -13,12 +13,11 @@
 
 .accordion {
     /* border: 2px solid red; */
-    width: 55%;
-    height: 450px;
-    /* background-color: powderblue; */
+    width: 65%;
+    height: 500px;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
+    justify-content: center;
     font-family: 'Laila', sans-serif;
 
 }
@@ -30,7 +29,6 @@
 
 .item {
 
-    /* margin-bottom: 3px; */
     padding: 10px 20px;
 
 }
@@ -49,7 +47,7 @@
 
 }
 
-.heading {
+.headings {
     font-size: 25px;
 }
 
@@ -83,9 +81,51 @@
     font-weight: 600;
 }
 
-@media only screen and (max-width:1000px) {
-    .content {
-        height: 110px;
+@media only screen and (max-width:1200px) {
+
+    .accordion {
+        width: 90%;
     }
 
+
+}
+
+@media only screen and (max-width:750px) {
+    .content {
+        height: 120px;
+    }
+
+    .accordion {
+        height: 650px;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .content {
+        height: 150px;
+    }
+
+    .accordion {
+        height: 725px;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    .content {
+        font-size: 14px;
+    }
+
+    .headings {
+        font-size: 20px;
+    }
+
+    .about {
+        font-size: 25px;
+    }
+
+    .up-down {
+        width: 20px;
+        height: 20px;
+        font-size: 18px;
+    }
 }
