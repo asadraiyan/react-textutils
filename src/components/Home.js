@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
-export default function Home({ mode }) {
+export default function Home(props) {
+  const { mode, showAlert } = props
   const [text, setText] = useState("");
 
   const lightBack = {
@@ -17,24 +18,29 @@ export default function Home({ mode }) {
     // console.log("Uppercase was clicked" + text)
     const newText = text.toUpperCase();
     setText(newText);
+    showAlert("Converted to uppercase !", "Success")
   };
   const lowerCaseHandler = () => {
     // console.log("Lowercase was clicked" + text)
     const newText = text.toLowerCase();
     setText(newText);
+    showAlert("Converted to lowercase !", "Success")
   };
   const clearTextHandler = () => {
     // console.log("cleartext was clicked" + text)
     setText("");
+    showAlert("Text has been cleared !", "Success")
   };
 
   const extraSpacesHandler = () => {
     const newText = text.split(/[ ]+/);
     setText(newText.join(" "));
+    showAlert("Extra spaces has been removed !", "Success")
   };
 
   const copyTextHandler = () => {
     navigator.clipboard.writeText(text)
+    showAlert("Text has been copied !", "Success")
   }
 
   const changetext = (e) => {
